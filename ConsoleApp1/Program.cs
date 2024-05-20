@@ -57,7 +57,7 @@ void CadastroConta()
     Console.WriteLine("Digite o numero da conta: ");
     string numero = Console.ReadLine();
     double limite;
-    CCorrente conta = contas.Find(c => c.numero == numero);
+    CCorrente conta = contas.Find(c => c.Numero == numero);
     if (conta == null)
     {
         Console.WriteLine("Digite o limite da conta: ");
@@ -83,17 +83,17 @@ void MostrarSaldo()
     Console.WriteLine("(numero) - (saldo)");
     foreach (var conta in contas)
     {
-        Console.WriteLine(conta.numero + " - " + conta.saldo);
+        Console.WriteLine(conta.Numero + " - " + conta.Saldo);
     }
 }
 void ExcluirConta()
 {
     Console.WriteLine("Digite o numero da conta que voce deseja excluir: ");
     string numero = Console.ReadLine();
-    CCorrente conta = contas.Find(c => c.numero == numero);
+    CCorrente conta = contas.Find(c => c.Numero == numero);
     if (conta != null)
     {
-        conta.status = false;
+        conta.Status = false;
         Console.WriteLine("Conta excluida com sucesso!");
     }
     else
@@ -109,7 +109,7 @@ void CaixaEletronico()
     double valor;
     Console.WriteLine("Digite o numero da conta que deseja consultar: ");
     string numero = Console.ReadLine();
-    CCorrente conta = contas.Find(c => c.numero == numero);
+    CCorrente conta = contas.Find(c => c.Numero == numero);
     if (conta != null)
     {
         do
@@ -168,7 +168,7 @@ void CaixaEletronico()
                     Console.Clear();
                     Console.Write("Digite o numero da conta destino: ");
                     string destino = Console.ReadLine();
-                    CCorrente cDestino = contas.Find(c => c.numero == destino);
+                    CCorrente cDestino = contas.Find(c => c.Numero == destino);
                     if (cDestino != null)
                     {
                         Console.Write("Digite o valor a transferir: ");

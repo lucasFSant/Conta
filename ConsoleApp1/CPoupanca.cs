@@ -17,7 +17,7 @@ namespace Projeto
             Transacoes = new List<Transacao>();
             this.limite = 0;
         }
-        public CPoupanca(string numero) : this()
+        public CPoupanca(string numero) : base()
         {
             this.numero = numero;
         }
